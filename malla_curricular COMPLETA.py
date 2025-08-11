@@ -105,7 +105,7 @@ if enfasis == "Hidrotecnia":
     for sem in curriculum.values():
         sem[:] = [s for s in sem if s["name"] not in materias_a_eliminar2]
         sem[:] = [s for s in sem if s["name"] not in ["Mecánica de Fluidos", "Mecánica de Suelos", "Materiales de Construcción", "Hidrología", "Hidráulica", "Electiva I", "Diseño Geométrico de Vías", "Diseño y Construcción de Estructuras en Concreto Reforzado","Diseño de Acueductos y Alcantarillado", "Fundamentos de Pavimentos"]]
-    curriculum["Semestre 4"].append({"name": "Mecánica de Fluidos", "credits": 3, "prerequisites": ["Hidráulica"], "corequisites": []})
+    curriculum["Semestre 4"].append({"name": "Mecánica de Fluidos", "credits": 3, "prerequisites": [], "corequisites": ["Mecánica Estructural II]})
     curriculum["Semestre 6"].append({"name": "Diseño de Acueductos y Alcantarillado", "credits": 2, "prerequisites": ["Hidráulica"], "corequisites": []})
     curriculum["Semestre 5"].append({"name": "Mecánica de Suelos", "credits": 3, "prerequisites": ["Materiales de Construcción"], "corequisites": []})
     curriculum["Semestre 5"].append({"name": "Hidrología", "credits": 3, "prerequisites": ["Análisis de Amenaza y Confiabilidad en IC"], "corequisites": []})
@@ -189,3 +189,4 @@ for row in range(max_materias):
                 st.markdown("</div>", unsafe_allow_html=True)
             else:
                 st.write("")  # Espacio vacío para mantener alineación
+
